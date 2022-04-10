@@ -42,7 +42,9 @@
 </head>
 
 <body>
-    <audio src="audio/bgmusic.mp3"></audio>
+    <audio id="myAudio" src="audio/bgmusic.mp3" preload="auto">
+    </audio>
+    <button onClick="togglePlay()"><i class="fa-solid fa-music"></i></button>
     <header>
         <div id="logo">
             <img draggable="false" src="images/logoimg.png" alt="">
@@ -70,11 +72,14 @@
     </footer>
 
     <script>
-        window.addEventListener("DOMContentLoaded", event => {
-            const audio = document.querySelector("audio");
-            audio.volume = 0.005;
-            audio.play();
-        });
+        var myAudio = document.getElementById("myAudio");
+        myAudio.volume = 0.05;
+
+
+        function togglePlay() {
+            return myAudio.paused ? myAudio.play() : myAudio.pause();
+        };
+
 
     </script>
 </body>

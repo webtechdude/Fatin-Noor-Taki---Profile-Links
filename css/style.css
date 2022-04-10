@@ -29,12 +29,43 @@
 }
 
 body {
-    background: url('../images/large_bg_img.gif');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/large_bg_img.gif');
+    background-color: rgba(0, 0, 0, 0.274);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     scrollbar-width: thin;
     scrollbar-color: #080029 #9050d0;
+    animation: bright 3s infinite ease-in-out;
+    backdrop-filter: brightness(90%);
+}
+
+
+
+button {
+    position: sticky;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    background-color: #18d860;
+    box-shadow: 0 0 5px 1px black;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    transition: all 0.1s ease;
+}
+.fa-music {
+    font-size: 1.2em;
+}
+button:hover {
+    background-color: #16a74d;
+    box-shadow: 0 0 10px 3px #dfacb0;
+}
+button:active {
+    background-color: #1672a7;
+}
+button:hover .fa-music {
+    color: white;
 }
 
 header {
@@ -123,7 +154,7 @@ section .link-bar {
     width: 70vw;
     border: 2px solid black;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.466);
+    background-color: rgba(255, 255, 255, 0.185);
     transition: all 0.3s ease;
 }
 
@@ -155,6 +186,7 @@ section .link-bar a i {
 }
 
 footer {
+    color: white;
     margin: 50px 0 5px;
     display: flex;
     justify-content: center;
@@ -226,6 +258,7 @@ section .link-bar:hover .fa-reddit {
 
     section .link-bar {
         width: 90vw;
+        background-color: rgba(0, 0, 0, 0.432);
     }
 
     section .link-bar .fa-instagram {
