@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+::selection {
+    color: #6001c5;
+    background-color: #e7819c;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #9050d0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #080029;
+    border-radius: 5px;
+    border: 1px solid #9050d0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #040014;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('../images/large_bg_img.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    scrollbar-width: thin;
+    scrollbar-color: #080029 #9050d0;
+}
+
+header {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px
+}
+
+header #logo img {
+    height: 200px;
+    width: auto;
+    border-radius: 50%;
+    animation: shadow 3s infinite alternate;
+}
+
+@keyframes shadow {
+    0% {
+        box-shadow: 0px 0px 13px 10px rgba(0, 0, 0);
+    }
+
+    25% {
+        box-shadow: 0px 0px 17px 15px rgba(0, 0, 0);
+        opacity: 0.8;
+    }
+
+    50% {
+        box-shadow: 0px 0px 25px 20px rgba(0, 0, 0);
+        opacity: 0.7;
+    }
+
+    75% {
+        box-shadow: 0px 0px 17px 15px rgba(0, 0, 0);
+        opacity: 0.8;
+    }
+
+    100% {
+        box-shadow: 0px 0px 13px 10px rgba(0, 0, 0);
+    }
+}
+
+
+header h1 {
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 50px;
+    color: antiquewhite;
+    animation: shadowtext 2s infinite ease;
+}
+
+@keyframes shadowtext {
+    0% {
+        text-shadow: 0 0 10px #000;
+    }
+
+    25% {
+        text-shadow: 0 0 15px #5a005a;
+    }
+
+    50% {
+        text-shadow: 0 0 20px #6001c5;
+    }
+
+    75% {
+        text-shadow: 0 0 15px #5a005a;
+    }
+
+    100% {
+        text-shadow: 0 0 10px #000;
+    }
+}
+
+section {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10vh;
+}
+
+section .link-bar {
+    height: 50px;
+    width: 70vw;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.466);
+    transition: all 0.5s ease;
+}
+
+section .link-bar a {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    width: inherit;
+    color: white;
+    text-decoration: none;
+    font-family: 'Comfortaa', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section .link-bar:hover {
+    background-color: rgba(255, 255, 255, 0.658);
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.651);
+}
+
+section .link-bar:hover a {
+    color: black;
+}
+
+section .link-bar a i {
+    margin-right: 5px;
+    transform: translateX(-5px);
+    font-size: 25px;
+}
+
+footer {
+    margin: 50px 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+
+}
+
+footer a {
+    text-decoration: none;
+    animation: color-changing 2s infinite ease;
+}
+
+@keyframes color-changing {
+    0% {
+        color: #5178c4;
+    }
+
+    50% {
+        color: whitesmoke;
+    }
+
+    100% {
+        color: #5178c4
+    }
+}
+
+/* SOCIAL HOVER */
+section .link-bar:hover .fa-instagram {
+    color: rgb(255, 42, 77);
+}
+
+section .link-bar:hover .fa-youtube {
+    color: red;
+}
+
+section .link-bar:hover .fa-spotify {
+    color: #18d860
+}
+
+section .link-bar:hover .fa-snapchat {
+    color: yellow;
+}
+
+section .link-bar:hover .fa-whatsapp {
+    color: #2ed54a;
+}
+
+section .link-bar:hover .fa-facebook {
+    color: #1877f2;
+}
+
+section .link-bar:hover .fa-reddit {
+    color: #FF5700;
+}
+
+@media only screen and (max-device-width: 800px) {
+    body {
+        background: url('../images/small_bg_img.gif');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    section {
+        margin-top: 5vh;
+        gap: 5vh
+    }
+
+    section .link-bar {
+        width: 90vw;
+    }
+
+    section .link-bar .fa-instagram {
+        color: rgb(255, 42, 77);
+    }
+
+    section .link-bar .fa-youtube {
+        color: red;
+    }
+
+    section .link-bar .fa-spotify {
+        color: #18d860
+    }
+
+    section .link-bar .fa-snapchat {
+        color: yellow;
+    }
+
+    section .link-bar .fa-whatsapp {
+        color: #2ed54a;
+    }
+
+    section .link-bar .fa-facebook {
+        color: #1877f2;
+    }
+
+    section .link-bar .fa-reddit {
+        color: #FF5700;
+    }
+
+}
