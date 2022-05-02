@@ -4,10 +4,10 @@
 <head>
     <link rel="preload" href="images/large_bg_img.gif" as="image">
     <link rel="preload" href="images/small_bg_img.gif" as="image">
+    <link rel="preload" href="css/st.css" as="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
     <!-- Primary Meta Tags -->
     <title>Fatin Noor Taki - Profile Links</title>
     <meta name="audience" content="Everyone">
@@ -39,7 +39,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/logoimg.png" type="image/x-icon">
     <title>Fatin Noor Taki</title>
-   
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -116,6 +116,16 @@
     </footer>
     <div class="cursor"></div>
     <script src="js/index.js"></script>
+    <script>
+        (function ($) {
+            'use strict';
+            $(window).on('load', function () {
+                if ($(".pre-loader").length > 0) {
+                    $(".pre-loader").fadeOut("slow");
+                }
+            });
+        })
+    </script>
 
 </body>
 

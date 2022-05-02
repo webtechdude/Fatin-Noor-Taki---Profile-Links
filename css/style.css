@@ -229,7 +229,9 @@ footer a {
         visibility: hidden;
     }
 
-    header #logo img {animation: none;}
+    header #logo img {
+        animation: none;
+    }
 }
 
 
@@ -387,3 +389,5 @@ section .link-bar:hover .fa-reddit {
     animation: cursorAnim3 .5s forwards;
     border: 1px solid #751671;
 }
+
+/* ======================= */
